@@ -23,39 +23,67 @@ $(function () {
             $('body').addClass('sticky-page-nav');
         }
     });
-    $('#competences').appear();
-    var charData = $(".chart").data('easy-pie-chart');
-    $("body").on("appear", "#competences", function () {
-        if ($(".chart").data('easy-pie-chart') == null) {
-            $('.chart').easyPieChart({
+    $('.chartComp1').appear();
+    $("body").on("appear", ".chartComp1", function () {
+        if ($(".chartComp1").data('easy-pie-chart') == null) {
+            $('.chartComp1').easyPieChart({
                 barColor: 'rgba(172, 137, 90, 0.9)',
                 trackColor: false,
                 scaleColor: false,
                 lineWidth: 5,
                 rotate: 180,
-                animate: 3000,
+                animate: 2500,
                 onStep: function (from, to, percent) {
-                    $('.chart'.el).find('span').text(Math.round(percent))
+                    $('.chartComp1'.el).find('span').text(Math.round(percent))
                 }
             });
         }
     });
-    $('body').on('disappear', '#competences', function () {
-        $(".chart").data('easy-pie-chart').update(0);
-        $(".chart").data('easy-pie-chart', null);
-        /* $('.chart').easyPieChart({
-            barColor: 'rgba(172, 137, 90, 0.9)',
-            trackColor: false,
-            scaleColor: false,
-            lineWidth: 5,
-            rotate: 180,
-            animate: 3000,
-            onStep: function (from, to, percent) {
-                $('.chart'.el).find('span').text(Math.round(percent))
-            }
-        }); */
-        $(".chart").data('easy-pie-chart', null);
+    $('body').on('disappear', '.chartComp1', function () {
+        $(".chartComp1").data('easy-pie-chart').update(null);
+        $(".chartComp1").data('easy-pie-chart', null);
     });
+    $('.chartComp2').appear();
+    $("body").on("appear", ".chartComp2", function () {
+        if ($(".chartComp2").data('easy-pie-chart') == null) {
+            $('.chartComp2').easyPieChart({
+                barColor: 'rgba(172, 137, 90, 0.9)',
+                trackColor: false,
+                scaleColor: false,
+                lineWidth: 5,
+                rotate: 180,
+                animate: 2500,
+                onStep: function (from, to, percent) {
+                    $('.chartComp2'.el).find('span').text(Math.round(percent))
+                }
+            });
+        }
+    });
+    $('body').on('disappear', '.chartComp2', function () {
+        $(".chartComp2").data('easy-pie-chart').update(null);
+        $(".chartComp2").data('easy-pie-chart', null);
+    });
+    $('.chartComp3').appear();
+    $("body").on("appear", ".chartComp3", function () {
+        if ($(".chartComp3").data('easy-pie-chart') == null) {
+            $('.chartComp3').easyPieChart({
+                barColor: 'rgba(172, 137, 90, 0.9)',
+                trackColor: false,
+                scaleColor: false,
+                lineWidth: 5,
+                rotate: 180,
+                animate: 2000,
+                onStep: function (from, to, percent) {
+                    $('.chartComp3'.el).find('span').text(Math.round(percent))
+                }
+            });
+        }
+    });
+    $('body').on('disappear', '.chartComp3', function () {
+        $(".chartComp3").data('easy-pie-chart').update(null);
+        $(".chartComp3").data('easy-pie-chart', null);
+    });
+    // Ajouter Quand Portfolio Actif
     /* var $container = $('.isotope');
     $container.imagesLoaded(function () {
         $('.isotope').isotope({
