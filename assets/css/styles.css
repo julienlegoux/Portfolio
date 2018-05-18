@@ -1,11 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: #666;
-    background: #f5f5f5;
+    color: #a1a1a1;
+    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #444;
     overflow-x: hidden;
     position: relative;
 }
@@ -16,6 +17,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: rgba(172, 137, 90, 0.9);
     font-weight: 500;
 }
 
@@ -64,16 +66,15 @@ a.btn:hover {
     background: #00a5bb;
 }
 
-
 #portrait {
     display: block;
     width: 200px;
     height: 200px;
-    background: #5c5c5c;
+    background: #5c5c5c00;
     border-radius: 50% 50%;
     background-image: url(../img/portrait.png);
-    background-position:50% 50%;
-    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-size: 200px 200px;
     margin-bottom: 7rem;
     bottom: 3rem;
@@ -81,12 +82,17 @@ a.btn:hover {
 }
 
 .header {
-    background: #5c5c5c;
-    color: #fff;
+    background: #5c5c5c00;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .header a {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header a:hover {
     color: #fff;
+    border-color: #fff;
 }
 
 .header .top-bar {
@@ -100,7 +106,7 @@ a.btn:hover {
 }
 
 .header .social a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #a1a1a1;
     display: inline-block;
     text-align: center;
     width: 32px;
@@ -115,7 +121,7 @@ a.btn:hover {
     background-clip: padding-box;
     padding-top: 2px;
     font-size: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 2px solid #a1a1a1;
 }
 
 .header .social a:hover {
@@ -165,7 +171,7 @@ a.btn:hover {
 }
 
 .header .presentation {
-    background: #5c5c5c;
+    background: #70707000;
     padding-top: 90px;
     padding-bottom: 60px;
     position: relative;
@@ -226,7 +232,7 @@ a.btn:hover {
 }
 
 .page-nav-wrapper {
-    background: #5c5c5c;
+    background: rgba(0, 0, 0, 0);
     padding-top: 20px;
     padding-bottom: 20px;
     position: absolute;
@@ -243,7 +249,7 @@ a.btn:hover {
     left: 0;
     width: 100%;
     z-index: 100;
-    background:#5c5c5c;
+    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.png);
 }
 
 .page-nav-wrapper a {
@@ -297,12 +303,46 @@ a.btn:hover {
     padding-bottom: 60px;
 }
 
+#topcontrol {
+    transition: all 0.4s ease-in-out;
+    background: rgba(172, 137, 90, 0.9);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    display: inline-block;
+    z-index: 30;
+    width: 36px;
+    height: 36px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#topcontrol:hover {
+    background: rgba(172, 137, 90, 0.555);
+    color: #fff;
+}
+
+#topcontrol .fa {
+    position: relative;
+    top: 3px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
 .section {
     -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-    padding: 45px;
-    background: #fff;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.2);
     margin-bottom: 45px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -359,8 +399,8 @@ a.btn:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background: #fff;
-    border: 3px solid rgb(145, 145, 145);
+    background: rgba(172, 137, 90, 0.9);
+    border: 3px solid black;
 }
 
 .timeline .item:after {
@@ -379,19 +419,12 @@ a.btn:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    background: rgb(163, 163, 163);
+    background: black;
     z-index: 10;
 }
 
 .timeline .work-place {
     position: relative;
-}
-
-.timeline .location {
-    position: absolute;
-    right: 0;
-    top: 2px;
-    color: #8a8a8a;
 }
 
 .timeline .location .fa {
@@ -413,15 +446,15 @@ a.btn:hover {
 
 .timeline .job-meta .title {
     font-size: 18px;
-    color: rgb(214, 214, 214);
+    color: rgba(172, 137, 90, 0.9);
 }
 
 .timeline .job-meta .time {
-    color: #8a8a8a;
+    color: #a1a1a1;
 }
 
 .timeline .job-desc {
-    color: #666;
+    color: #a1a1a1;
 }
 
 .formations .item {
@@ -434,12 +467,13 @@ a.btn:hover {
 
 .formations .degree {
     font-size: 18px;
-    color: rgb(199, 199, 199);
+    color: rgba(172, 137, 90, 0.9);
     margin-top: 0;
     margin-bottom: 0px;
 }
 
 .formations .education-body {
+    color: #a1a1a1;
     font-weight: 500;
     margin-bottom: 0px;
     font-size: 16px;
@@ -447,17 +481,17 @@ a.btn:hover {
 }
 
 .formations .time {
-    color: #8a8a8a;
+    color: #a1a1a1;
     margin-bottom: 15px;
 }
 
 .formations .desc {
-    color: #666;
+    color: #a1a1a1;
 }
 
 .competences .subtitle {
     font-size: 18px;
-    color: #8a8a8a;
+    color: #a1a1a1;
     margin-top: 0;
     margin-bottom: 45px;
     font-weight: 300;
@@ -472,12 +506,12 @@ a.btn:hover {
 }
 
 .competences .level {
-    color: #8a8a8a;
+    color: #a1a1a1;
     margin-bottom: 15px;
 }
 
 .competences .desc {
-    color: #666;
+    color: #a1a1a1;
 }
 
 .competences .skill-tag {
@@ -487,10 +521,12 @@ a.btn:hover {
     padding: 6px 30px;
     display: inline-block;
     margin-right: 10px;
-    border: 1px solid #f5f5f5;
+    border: 1px solid rgba(172, 137, 90, 0.9);
+    border-radius: 50% 50% / 50% 50%;
     font-weight: 500;
     margin-bottom: 15px;
     font-size: 16px;
+    color: #a1a1a1
 }
 
 .chart-easy-pie {
@@ -507,6 +543,7 @@ a.btn:hover {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 30px;
+    color: rgba(172, 137, 90, 0.9);
 }
 
 .chart span {
@@ -521,12 +558,12 @@ a.btn:hover {
 
 .footer .container {
     padding: 30px;
-    color: #8a8a8a;
+    color: #a1a1a1;
     letter-spacing: 0.5px;
 }
 
 .footer .container a {
-    color: #8a8a8a;
+    color: #a1a1a1;
 }
 
 /* Extra small devices (phones, less than 768px) */

@@ -23,68 +23,45 @@ $(function () {
             $('body').addClass('sticky-page-nav');
         }
     });
-
     $('#competences').appear();
-    /* $("body").on("appear", "#competences", function() {
-        $('.chart').easyPieChart({
-            barColor: '#dc3545',
-            trackColor: '#E8E8E8E8',
-            scaleColor: false,
-            lineWidth: 5,
-            animate: 3000,
-            onStep: function (from, to, percent) {
-                $('.chart'.el).find('span').text(Math.round(percent))}
-        });
-    }); */
     var charData = $(".chart").data('easy-pie-chart');
-    console.log (charData )    
     $("body").on("appear", "#competences", function () {
         if ($(".chart").data('easy-pie-chart') == null) {
             $('.chart').easyPieChart({
-                barColor: '#dc3545',
-                trackColor: '#E8E8E8E8',
+                barColor: 'rgba(172, 137, 90, 0.9)',
+                trackColor: false,
                 scaleColor: false,
                 lineWidth: 5,
-                animate: 3000,
-                onStep: function (from, to, percent) {
-                    $('.chart'.el).find('span').text(Math.round(percent))                    
-                }                
-            });
-        } /* else {
-            $(".chart").data('easy-pie-chart', null)
-            $('.chart').easyPieChart({
-                barColor: '#dc3545',
-                trackColor: '#E8E8E8E8',
-                scaleColor: false,
-                lineWidth: 5,
+                rotate: 180,
                 animate: 3000,
                 onStep: function (from, to, percent) {
                     $('.chart'.el).find('span').text(Math.round(percent))
                 }
             });
-        } */
+        }
     });
     $('body').on('disappear', '#competences', function () {
         $(".chart").data('easy-pie-chart').update(0);
         $(".chart").data('easy-pie-chart', null);
-        $('.chart').easyPieChart({
-            barColor: '#fff',
-            trackColor: '#fff',
+        /* $('.chart').easyPieChart({
+            barColor: 'rgba(172, 137, 90, 0.9)',
+            trackColor: false,
             scaleColor: false,
             lineWidth: 5,
+            rotate: 180,
             animate: 3000,
             onStep: function (from, to, percent) {
                 $('.chart'.el).find('span').text(Math.round(percent))
             }
-        });
+        }); */
         $(".chart").data('easy-pie-chart', null);
     });
-    var $container = $('.isotope');
+    /* var $container = $('.isotope');
     $container.imagesLoaded(function () {
         $('.isotope').isotope({
             itemSelector: '.item'
         });
-    });
+    }); */
     $('.filters').each(function (i, typeGroup) {
         var $typeGroup = $(typeGroup);
         $typeGroup.on('click', '.type', function () {
@@ -92,5 +69,4 @@ $(function () {
             $(this).addClass('active');
         });
     });
-
 });
