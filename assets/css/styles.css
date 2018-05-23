@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #a1a1a1;
-    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.png);
+    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-size: 14px;
@@ -41,8 +41,7 @@ p {
 
 .btn,
 a.btn {
-    background: #008fa1;
-    color: #fff;
+    background: rgba(0, 0, 0, 0);
     padding: 8px 15px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -60,12 +59,6 @@ a.btn {
     font-size: 14px;
 }
 
-.btn:hover,
-a.btn:hover {
-    color: #fff;
-    background: #00a5bb;
-}
-
 #portrait {
     display: block;
     width: 200px;
@@ -76,9 +69,12 @@ a.btn:hover {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 200px 200px;
-    margin-bottom: 7rem;
-    bottom: 3rem;
+    margin-bottom: 12rem;
     position: relative;
+}
+
+.presentation a.btn {
+    display: none;
 }
 
 .header {
@@ -103,6 +99,7 @@ a.btn:hover {
 
 .header .social {
     margin-bottom: 0;
+    padding-bottom: 9px;
 }
 
 .header .social a {
@@ -119,7 +116,7 @@ a.btn:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    padding-top: 2px;
+    padding-bottom: 2px;
     font-size: 16px;
     border: 2px solid #a1a1a1;
 }
@@ -173,7 +170,7 @@ a.btn:hover {
 .header .presentation {
     background: #70707000;
     padding-top: 90px;
-    padding-bottom: 60px;
+    /* padding-bottom: 0px; */
     position: relative;
     font-size: 16px;
 }
@@ -234,7 +231,7 @@ a.btn:hover {
 .page-nav-wrapper {
     background: rgba(0, 0, 0, 0);
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     position: absolute;
     width: 100%;
     left: 0;
@@ -249,7 +246,11 @@ a.btn:hover {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.png);
+    background: url(../img/texture_108_3000x3000_dark_by_frostbo-d4js917.jpg);
+}
+
+.page-nav-wrapper a.btn {
+    margin-top: -3rem;
 }
 
 .page-nav-wrapper a {
@@ -261,6 +262,8 @@ a.btn:hover {
 .page-nav-wrapper .page-nav {
     margin: 0 auto;
     display: inline-block;
+    padding-right: 8rem;
+    margin-left: 18.5rem;
 }
 
 .page-nav-wrapper .page-nav li {
@@ -566,9 +569,53 @@ a.btn:hover {
     color: #a1a1a1;
 }
 
+@media (max-width: 1200px) {
+    #portrait {
+        margin-bottom: 7rem;
+        bottom: 3rem;
+    }
+    .page-nav-wrapper a.btn {
+        display: none;
+    }
+    .page-nav-wrapper .page-nav {
+        margin: 0 auto;
+        display: inline-block;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    .presentation a.btn {
+        display: initial;
+    }
+}
+
 /* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 767px) {
+    .frostbo{
+        display: none;
+    }
+    body {
+        background: #000;
+    }
+    #portrait {
+        margin-bottom: 7rem;
+        bottom: 3rem;
+    }
+    .page-nav-wrapper.fixed {
+        background:#000;
+    }
+    .page-nav-wrapper a.btn {
+        display: none;
+    }
+    .page-nav-wrapper .page-nav {
+        margin: 0 auto;
+        display: inline-block;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    .page-nav-wrapper .page-nav li {
+        margin-right: 20px;
+    }
     .header .social {
         margin: 0 auto;
         text-align: center;
