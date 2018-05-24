@@ -28,7 +28,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #007888;
+    color: rgba(172, 137, 90, 0.9);
 }
 
 a:focus {
@@ -37,6 +37,11 @@ a:focus {
 
 p {
     line-height: 1.5;
+}
+.btn:focus{
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .btn,
@@ -106,8 +111,8 @@ a.btn {
     color: #a1a1a1;
     display: inline-block;
     text-align: center;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 27px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -333,7 +338,7 @@ a.btn {
     color: #fff;
 }
 
-#topcontrol .fa {
+#topcontrol .svg-inline--fa {
     position: relative;
     top: 3px;
     font-size: 25px;
@@ -591,6 +596,9 @@ a.btn {
 /* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 767px) {
+    #contact-link{
+        bottom: 7rem;
+    }
     .frostbo{
         display: none;
     }
