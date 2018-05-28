@@ -505,10 +505,6 @@ a.btn {
     font-weight: 300;
 }
 
-.competences .comp-principal {
-    margin-bottom: 60px;
-}
-
 .competences .comp-principal .item {
     margin-bottom: 45px;
 }
@@ -596,6 +592,9 @@ a.btn {
 /* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 767px) {
+    #li-menu{
+        display: none;
+    }
     #contact-link{
         bottom: 7rem;
     }

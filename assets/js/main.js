@@ -97,4 +97,12 @@ $(function () {
             $(this).addClass('active');
         });
     });
+    var d;
+    const email1 = 'mailto:';
+    const email2 = 'pro@';
+    const email3 = 'julienlegoux.fr';
+    const email = email1 + email2 + email3;
+     
+    
+    $('#link-email').click(function() { window.location.href=email });
 });
