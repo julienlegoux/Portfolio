@@ -22,7 +22,7 @@ h6 {
 }
 
 a {
-    color: #000000;
+    color: #a1a1a1;
     transition: all 0.4s ease-in-out;
 }
 
@@ -73,7 +73,7 @@ a.btn {
     background-image: url(../img/portrait.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 200px 200px;
+    background-size: 200px 200px; 
     margin-bottom: 12rem;
     position: relative;
 }
@@ -175,7 +175,6 @@ a.btn {
 .header .presentation {
     background: #70707000;
     padding-top: 90px;
-    /* padding-bottom: 0px; */
     position: relative;
     font-size: 16px;
 }
@@ -272,7 +271,7 @@ a.btn {
 }
 
 .page-nav-wrapper .page-nav li {
-    margin-right: 30px;
+    margin-right: 20px;
     display: inline-block;
     background: none;
 }
@@ -284,7 +283,6 @@ a.btn {
 
 .page-nav-wrapper .page-nav li a {
     color: rgba(255, 255, 255, 0.6);
-    padding: inherit;
 }
 
 .page-nav-wrapper .page-nav li a:hover {
@@ -368,11 +366,13 @@ a.btn {
 
 .section-title {
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
     font-size: 24px;
     text-align: center;
 }
-
+#formations>.section-title {
+    margin-bottom: 45px;
+}
 .timeline {
     border-left: 3px solid rgba(172, 137, 90, 0.9);
     border-bottom-right-radius: 2px;
@@ -592,7 +592,7 @@ a.btn {
 /* Extra small devices (phones, less than 768px) */
 
 @media (max-width: 767px) {
-    #li-menu{
+    #nav_menu{
         display: none;
     }
     #contact-link{
@@ -677,32 +677,6 @@ a.btn {
     }
     .formations .item {
         padding: 0;
-    }
-    .portfolio-section .filters .type {
-        font-size: 12px;
-        margin-right: 5px;
-        padding: 8px 5px;
-    }
-    .portfolio-section .item-inner .content {
-        padding: 15px;
-    }
-    .portfolio-section .item-inner .content .sub-title {
-        font-size: 14px;
-        max-width: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .portfolio-section .item-inner .content .meta {
-        margin-bottom: 30px;
-        max-width: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .portfolio-section .item-inner .content .action {
-        position: static;
-        font-size: 12px;
     }
     .contact-section .presentation {
         padding: 0;

@@ -1,0 +1,20 @@
+#htaccess file
+<files .htaccess>
+order allow,deny
+deny from all
+</files> 
+
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 443
+RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.julienlegoux.fr [NC]
+RewriteRule ^(.*)$ http://julienlegoux.fr/$1 [L,R=301]
+
+ErrorDocument 404 /page_404.html
